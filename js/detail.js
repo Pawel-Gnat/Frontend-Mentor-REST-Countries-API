@@ -39,5 +39,5 @@ export const renderDetail = () => {
 }
 
 const goBackToDashboard = () => {
-	window.location.search = '/index.html'
+	window.location.search = './index.html'
 }
