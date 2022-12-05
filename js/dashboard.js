@@ -20,6 +20,8 @@ export const renderDashboard = () => {
 				}
 			})
 			renderCountriesList(countries)
+
+			console.log(countries)
 		})
 
 	const filterDataAndRenderCountriesList = () => {

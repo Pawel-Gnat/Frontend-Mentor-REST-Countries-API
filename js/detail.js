@@ -2,13 +2,13 @@ import { renderCountryDetails } from './dom-utils.js'
 
 export const renderDetail = () => {
 	const searchParams = new URLSearchParams(window.location.search)
-	const countryCode = searchParams.get('country')
+	const countryName = searchParams.get('country')
 
-	if (!countryCode) {
+	if (!countryName) {
 		goBackToDashboard()
 	}
 
-	const API_URL_ALL = `https://restcountries.com/v3.1/alpha/${countryCode}`
+	const API_URL_ALL = `https://restcountries.com/v3.1/name/${countryName}`
 
 	fetch(API_URL_ALL)
 		.then(res => res.json())
