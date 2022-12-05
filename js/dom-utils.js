@@ -139,6 +139,6 @@ export const renderCountriesList = countries => {
 
 export const renderCountryDetails = country => {
 	rootElement.innerHTML = ''
-	rootElement.appendChild(createDetailButton('Go back', '/'))
+	rootElement.appendChild(createDetailButton('Go back', './index.html'))
 	rootElement.appendChild(createDetailElement(country))
 }
