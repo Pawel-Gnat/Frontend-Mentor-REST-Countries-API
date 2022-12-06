@@ -45,6 +45,10 @@ main {
 header {
 	background-color: var(--color-header-background);
 
+	h1 {
+		cursor: pointer;
+	}
+
 	.theme {
 		font-family: 'Nunito Sans', sans-serif;
 		font-size: 1.4rem;

@@ -1,3 +1,5 @@
+import { goBackToDashboard } from './detail.js'
+
 const rootElement = document.querySelector('#root')
 
 const createInfoElement = (labelName, value) => {
@@ -142,3 +144,7 @@ export const renderCountryDetails = country => {
 	rootElement.appendChild(createDetailButton('Go back', './index.html'))
 	rootElement.appendChild(createDetailElement(country))
 }
+
+document.querySelector('h1').addEventListener('click', () => {
+	goBackToDashboard()
+})

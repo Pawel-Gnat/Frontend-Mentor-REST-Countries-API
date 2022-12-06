@@ -38,6 +38,7 @@ export const renderDetail = () => {
 		})
 }
 
-const goBackToDashboard = () => {
+export const goBackToDashboard = () => {
 	window.location.search = './index.html'
 }
+
