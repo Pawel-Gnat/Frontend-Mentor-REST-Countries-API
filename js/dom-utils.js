@@ -29,7 +29,6 @@ const createCountryItemElement = country => {
 	const countryElement = document.createElement('li')
 
 	const anchorElement = document.createElement('a')
-	// anchorElement.href = `?country=${country.code}`
 	anchorElement.href = `?country=${country.name}`
 
 	anchorElement.appendChild(createFlagImgElement(country))
@@ -127,7 +126,7 @@ const createBorderCountriesContainer = country => {
 	borderCountriesContainerElement.appendChild(labelElement)
 
 	country.borders.forEach(border => {
-		borderCountriesContainerElement.appendChild(createDetailButton(border, `/?country=${border}`))
+		borderCountriesContainerElement.appendChild(createDetailButton(border, `./?country=${border}`))
 	})
 
 	return borderCountriesContainerElement
