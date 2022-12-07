@@ -8,7 +8,7 @@ export const renderDetail = () => {
 		goBackToDashboard()
 	}
 
-	const API_URL_ALL = `https://restcountries.com/v3.1/name/${countryName}`
+	const API_URL_ALL = `https://restcountries.com/v3.1/alpha/${countryName}`
 
 	fetch(API_URL_ALL)
 		.then(res => res.json())
@@ -22,7 +22,7 @@ export const renderDetail = () => {
 				population: country.population.toLocaleString(),
 				name: country.name.common,
 				nativeName: Object.values(country.name.nativeName)[0].official,
-				code: country.cioc,
+				code: country.cca3,
 				region: country.region,
 				subregion: country.subregion,
 				flagUrl: country.flags.png,
@@ -41,4 +41,3 @@ export const renderDetail = () => {
 export const goBackToDashboard = () => {
 	window.location.search = './index.html'
 }
-

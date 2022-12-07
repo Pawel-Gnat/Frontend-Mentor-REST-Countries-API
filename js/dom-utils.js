@@ -31,7 +31,8 @@ const createCountryItemElement = country => {
 	const countryElement = document.createElement('li')
 
 	const anchorElement = document.createElement('a')
-	anchorElement.href = `?country=${country.name}`
+
+	anchorElement.href = `?country=${country.code}`
 
 	anchorElement.appendChild(createFlagImgElement(country))
 
