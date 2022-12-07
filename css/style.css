@@ -1,4 +1,4 @@
-:root {
+body.light {
   --color-text: hsl(200, 15%, 8%);
   --color-input: hsl(0, 0%, 52%);
   --color-background: hsl(0, 0%, 98%);
