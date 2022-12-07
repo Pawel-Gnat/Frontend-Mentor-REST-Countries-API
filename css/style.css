@@ -3,6 +3,14 @@
   --color-input: hsl(0, 0%, 52%);
   --color-background: hsl(0, 0%, 98%);
   --color-header-background: hsl(0, 0%, 100%);
+  --color-shadow: rgb(60 70 90);
+}
+
+body.dark {
+  --color-text: hsl(0, 0%, 100%);
+  --color-background: hsl(207, 26%, 17%);
+  --color-header-background: hsl(209, 23%, 22%);
+  --color-shadow: hsl(200, 15%, 0%);
 }
 
 * {
@@ -27,6 +35,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   min-height: 100vh;
   background-color: var(--color-background);
   color: var(--color-text);
@@ -36,12 +47,13 @@ main {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  width: 100%;
   max-width: 144rem;
   padding: 0rem 8rem;
-  margin: 0 auto;
 }
 
 header {
+  width: 100%;
   background-color: var(--color-header-background);
 }
 header h1 {
@@ -55,8 +67,9 @@ header .theme {
   padding: 1rem 2rem;
   border-radius: 0.5rem;
   background: none;
-  -webkit-box-shadow: 0px 2px 5px -3px rgb(60, 70, 90);
-          box-shadow: 0px 2px 5px -3px rgb(60, 70, 90);
+  color: var(--color-text);
+  -webkit-box-shadow: 0px 2px 5px -3px var(--color-shadow);
+          box-shadow: 0px 2px 5px -3px var(--color-shadow);
   cursor: pointer;
 }
 
@@ -94,9 +107,9 @@ header .theme {
   padding: 2rem 3rem;
   border: none;
   border-radius: 0.5rem;
-  background-color: var(--color-background);
-  -webkit-box-shadow: 0px 2px 5px -3px rgb(60, 70, 90);
-          box-shadow: 0px 2px 5px -3px rgb(60, 70, 90);
+  background-color: var(--color-header-background);
+  -webkit-box-shadow: 0px 2px 5px -3px var(--color-shadow);
+          box-shadow: 0px 2px 5px -3px var(--color-shadow);
 }
 .filters input {
   font-family: "Nunito Sans", sans-serif;
@@ -105,6 +118,7 @@ header .theme {
   max-width: 90%;
   border: none;
   background-color: transparent;
+  color: var(--color-text);
 }
 .filters select {
   font-family: "Nunito Sans", sans-serif;
@@ -115,10 +129,10 @@ header .theme {
   border: none;
   border-right: 1.5rem solid transparent;
   border-radius: 0.5rem;
-  background-color: var(--color-background);
+  background-color: var(--color-header-background);
   color: var(--color-text);
-  -webkit-box-shadow: 0px 2px 5px -3px rgb(60, 70, 90);
-          box-shadow: 0px 2px 5px -3px rgb(60, 70, 90);
+  -webkit-box-shadow: 0px 2px 5px -3px var(--color-shadow);
+          box-shadow: 0px 2px 5px -3px var(--color-shadow);
   cursor: pointer;
 }
 
@@ -134,8 +148,9 @@ ul {
 }
 ul li {
   border-radius: 0.5rem;
-  -webkit-box-shadow: 0px 2px 5px -3px rgb(60, 70, 90);
-          box-shadow: 0px 2px 5px -3px rgb(60, 70, 90);
+  background-color: var(--color-header-background);
+  -webkit-box-shadow: 0px 2px 5px -3px var(--color-shadow);
+          box-shadow: 0px 2px 5px -3px var(--color-shadow);
   overflow: hidden;
 }
 ul li a {
@@ -149,6 +164,9 @@ ul li img {
 .info-container {
   padding: 3rem 2.5rem 4.5rem;
 }
+.info-container span {
+  opacity: 0.8;
+}
 
 .country-name {
   font-size: 1.6rem;
@@ -161,10 +179,10 @@ ul li img {
   min-width: 10rem;
   padding: 0.5rem 2.5rem;
   margin: 0.5rem;
-  -webkit-box-shadow: 0px 2px 5px -3px rgb(60, 70, 90);
-          box-shadow: 0px 2px 5px -3px rgb(60, 70, 90);
+  -webkit-box-shadow: 0px 2px 5px -3px var(--color-shadow);
+          box-shadow: 0px 2px 5px -3px var(--color-shadow);
   border-radius: 0.5rem;
-  background-color: transparent;
+  background-color: var(--color-header-background);
   color: var(--color-text);
   text-align: center;
 }
@@ -196,6 +214,9 @@ ul li img {
 .detail-content div div {
   margin: 0.5rem 0;
 }
+.detail-content span {
+  opacity: 0.8;
+}
 
 .detail-name,
 .border-countries-container {
@@ -217,6 +238,10 @@ ul li img {
 footer {
   margin: 2rem 0;
   text-align: center;
+}
+footer a {
+  color: var(--color-text);
+  opacity: 0.5;
 }
 
 @media screen and (max-width: 1300px) {
