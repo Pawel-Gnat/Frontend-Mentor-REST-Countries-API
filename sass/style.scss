@@ -100,7 +100,12 @@ header {
 		color: var(--color-text);
 	}
 
+	label {
+		visibility: hidden;
+	}
+
 	select {
+		flex-shrink: 0;
 		font-family: 'Nunito Sans', sans-serif;
 		font-size: 1.4rem;
 		min-width: 10rem;
@@ -264,7 +269,7 @@ footer {
 
 	.filters {
 		flex-direction: column;
-		gap: 4rem;
+		gap: 1.5rem;
 
 		.search {
 			max-width: 100%;
@@ -299,7 +304,6 @@ footer {
 	.filters {
 		margin: 2.5rem 0 3rem;
 		flex-direction: column;
-		gap: 4rem;
 
 		.search {
 			max-width: 100%;

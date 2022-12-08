@@ -120,7 +120,12 @@ header .theme {
   background-color: transparent;
   color: var(--color-text);
 }
+.filters label {
+  visibility: hidden;
+}
 .filters select {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   font-family: "Nunito Sans", sans-serif;
   font-size: 1.4rem;
   min-width: 10rem;
@@ -281,7 +286,7 @@ footer a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 4rem;
+    gap: 1.5rem;
   }
   .filters .search {
     max-width: 100%;
@@ -310,7 +315,6 @@ footer a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 4rem;
   }
   .filters .search {
     max-width: 100%;
