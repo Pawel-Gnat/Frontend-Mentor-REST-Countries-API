@@ -120,9 +120,6 @@ header .theme {
   background-color: transparent;
   color: var(--color-text);
 }
-.filters label {
-  visibility: hidden;
-}
 .filters select {
   -ms-flex-negative: 0;
       flex-shrink: 0;
@@ -286,7 +283,7 @@ footer a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 1.5rem;
+    gap: 4rem;
   }
   .filters .search {
     max-width: 100%;
